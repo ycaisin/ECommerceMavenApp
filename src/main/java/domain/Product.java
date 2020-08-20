@@ -13,7 +13,7 @@ import java.util.Locale;
 
 import javax.xml.crypto.Data;
 
-import com.github.javafaker.Faker;
+//import com.github.javafaker.Faker;
 import com.sun.glass.ui.Application;
 
 import exception.ImageNotFoundException;

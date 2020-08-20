@@ -1,0 +1,14 @@
+controllers\ProductViewController.class
+main\ECommerceApplication.class
+main\GUIApplication.class
+domain\Money.class
+domain\ProductRepository.class
+domain\Currency.class
+domain\ProductInterface.class
+domain\Category.class
+domain\Cart.class
+domain\DataRepository.class
+exception\ImageNotFoundException.class
+domain\ProductFactory.class
+domain\Product.class
+domain\CurrencyProvider.class

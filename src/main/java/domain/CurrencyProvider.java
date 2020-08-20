@@ -6,11 +6,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.github.javafaker.Faker;
+//import com.github.javafaker.Faker;
 
 public class CurrencyProvider implements Serializable{
 	private static CurrencyProvider instance;
-	private Map<String,Currency> currencies; // дает доступ по ключе
+	private Map<String,Currency> currencies; // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 	
 	public CurrencyProvider(){
 		this.currencies = new HashMap<String, Currency>(); 
@@ -34,11 +34,12 @@ public class CurrencyProvider implements Serializable{
 		return currencies.get(code);   
 	}
 	
-	public String generateFakeCurrencyCode(){
+/*	public String generateFakeCurrencyCode(){
 		Faker faker = new Faker();
 		String code = faker.currency().code();
 		while(currencies.get(code) == null)
 			code = faker.currency().code();
 		return code;
 	}
+	*/
 }

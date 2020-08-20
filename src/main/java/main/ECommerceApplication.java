@@ -12,7 +12,8 @@ import domain.Money;
 import domain.Product;
 import domain.ProductFactory;
 
-public class Application {
+@SuppressWarnings("unused")
+public class ECommerceApplication {
 
 public static void main(String[] args) throws IOException, ClassNotFoundException {
 		
