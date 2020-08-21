@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="402.0" prefWidth="437.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProductViewController">
+<VBox prefHeight="573.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProductViewController">
   <children>
-    <AnchorPane fx:id="showProductPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="371.0" prefWidth="448.0" VBox.vgrow="ALWAYS">
+    <AnchorPane fx:id="showProductPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="518.0" prefWidth="582.0" VBox.vgrow="ALWAYS">
       <children>
-            <Button fx:id="showProduct" layoutX="136.0" layoutY="321.0" mnemonicParsing="false" onAction="#showProduct" prefHeight="54.0" prefWidth="165.0" text="Show Product" />
-            <Label fx:id="productName" layoutX="36.0" layoutY="14.0" prefHeight="37.0" prefWidth="366.0" />
-            <ImageView fx:id="productImage" fitHeight="229.0" fitWidth="305.0" layoutX="69.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="showProduct" layoutX="218.0" layoutY="488.0" mnemonicParsing="false" onAction="#showProduct" prefHeight="54.0" prefWidth="165.0" text="Show Product" />
       </children>
     </AnchorPane>
   </children>

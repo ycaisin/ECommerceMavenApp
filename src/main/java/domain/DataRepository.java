@@ -2,6 +2,7 @@ package domain;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -23,18 +24,24 @@ public class DataRepository {
 	};
 	
 	
-	public <T> T load(Class<?> classType) throws ClassNotFoundException, IOException{
+	public <T> T load(Class<?> classType) {
 		
 		String name = classType.getName();
 		String fileName = name.substring(name.indexOf(".") + 1, name.length()).toLowerCase();
 		File file = new File(fileName + ".bin");
 		
-		FileInputStream fis = new FileInputStream(file);
-		ObjectInputStream ois = new ObjectInputStream(fis);
+		FileInputStream fis;
+		try {
+			fis = new FileInputStream(file);
+			ObjectInputStream ois = new ObjectInputStream(fis);
+			Object obj = ois.readObject();
+			ois.close();
+			return (T) obj;
+		} catch (IOException | ClassNotFoundException e) {
+			return null;
+		}
 		
-		Object obj = ois.readObject();
-		ois.close();
-		return (T) obj;
+		
 		};
 	
 	

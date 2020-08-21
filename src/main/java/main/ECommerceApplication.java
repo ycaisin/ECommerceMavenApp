@@ -26,25 +26,19 @@ public static void main(String[] args) throws IOException, ClassNotFoundExceptio
 		futureDate.add(Calendar.DATE, 15);
 
 		Product p = productFactory.getProduct(
-				"Hat", 
+				"-- Lady in RED -- picture", 
 				new Money("USD", (float)300), 
 				2, 
 				faker.date().between(
 						Calendar.getInstance().getTime(), 
 						futureDate.getTime()), 
 				"md", 
-				new Category("1"), "/images/product-1.jpg");
+				new Category("Art"), "/images/product-1.jpg");
 		
-		//if(p!=null) {
-	
 			dataRepository.save(p);	
 			p = dataRepository.load(Product.class);
 			System.out.println("Product from file:\n" +p +"\n");
-		//}
-		//else 
-			//System.out.println("Can not create product");
-		
-		//getImagesFromDirectory();
+
 
 	}
 
