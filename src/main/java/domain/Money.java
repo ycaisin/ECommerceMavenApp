@@ -8,6 +8,16 @@ public class Money implements Serializable{
 	
 	private CurrencyProvider currencyProvider = new CurrencyProvider();
 	
+	public Money() {
+		this.currency = CurrencyProvider.getInstance().getCurrency("EUR"); 
+		this.amount = (float) 0;
+	}
+	
+	public Money(String currencyCode, Float amount) {
+		this.currency = CurrencyProvider.getInstance().getCurrency(currencyCode); 
+		this.amount = amount;
+	}
+	
 	public Currency getCurrency() {
 		return currency;
 	}
@@ -24,16 +34,6 @@ public class Money implements Serializable{
 		this.amount = amount;
 	}
 	
-	public Money() {
-		this.currency = CurrencyProvider.getInstance().getCurrency("EUR"); 
-		this.amount = (float) 0;
-	}
-	
-	public Money(String currencyCode, Float amount) {
-		this.currency = CurrencyProvider.getInstance().getCurrency(currencyCode); 
-		this.amount = amount;
-	}
-
 	@Override
 	public String toString() {
 		return "Money [currency=" + currency.toString() + ", amount=" + amount + "]";

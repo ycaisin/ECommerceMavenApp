@@ -135,15 +135,6 @@ public class Product implements ProductInterface, Serializable{
 			return true;
 		else 
 			return false;
-		
-		/*
-		 try {
-		 	ImageIO.read(file);
-		} catch (IOException e) {
-			return false;
-		} 
-		return true;
-		*/
 	}
 	
 	/*

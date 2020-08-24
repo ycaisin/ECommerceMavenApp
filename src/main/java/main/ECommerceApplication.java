@@ -1,10 +1,13 @@
 package main;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Calendar;
 
 import com.github.javafaker.Faker;
 
+import dao.CurrencyRepository;
+import dao.MoneyRepository;
 import domain.Category;
 import domain.CurrencyProvider;
 import domain.DataRepository;
@@ -15,10 +18,23 @@ import domain.ProductFactory;
 @SuppressWarnings("unused")
 public class ECommerceApplication {
 
-public static void main(String[] args) throws IOException, ClassNotFoundException {
+public static void main(String[] args) throws IOException, ClassNotFoundException, SQLException {
 		
 		CurrencyProvider currencyProvider = new CurrencyProvider().getInstance();
-		ProductFactory productFactory = new ProductFactory();
+		CurrencyRepository cr = new CurrencyRepository();
+		MoneyRepository mr = new MoneyRepository();
+		
+		//System.out.println(cr.findById(1));
+		//cr.addCurrency("EUR", 1);
+		//cr.deleteCurrency(3);
+		
+		//System.out.println(mr.findById(1));
+		//mr.addMoney("EUR", 900);
+		mr.deleteMonay(8);
+		
+		
+		
+		/*ProductFactory productFactory = new ProductFactory();
 		DataRepository dataRepository = new DataRepository();
 
 		Faker faker = new Faker();
@@ -38,7 +54,7 @@ public static void main(String[] args) throws IOException, ClassNotFoundExceptio
 			dataRepository.save(p);	
 			p = dataRepository.load(Product.class);
 			System.out.println("Product from file:\n" +p +"\n");
-
+*/
 
 	}
 
