@@ -36,6 +36,8 @@ public static void main(String[] args) throws IOException, ClassNotFoundExceptio
 		
 		//System.out.println(catr.findById(1));		
 		//catr.deleteCategory(3);
+		
+		
 		ProductRepository pr = new ProductRepository();
 		Product product;
 		System.out.println(pr.findById(1));

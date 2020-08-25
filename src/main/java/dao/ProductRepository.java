@@ -61,7 +61,6 @@ public class ProductRepository {
 			Statement st = conn.createStatement(); 
 			mr.addMoney(cr.findByCode(money.getCurrency().getCode()).getCode(), money.getAmount());
 			//"SELECT * FROM money INNER JOIN currencies ON money.currency_id = currencies.id WHERE currency.code = " +   money.getCurrency().getCode() ); 
-
 			
 			PreparedStatement ps = conn.prepareStatement(insert_product_query); 
 	        ps.setString(1, name); 
