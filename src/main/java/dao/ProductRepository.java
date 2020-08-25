@@ -66,18 +66,14 @@ public class ProductRepository {
 			PreparedStatement ps = conn.prepareStatement(insert_product_query); 
 	        ps.setString(1, name); 
 
-	        ResultSet rs = st.executeQuery("Select * from money WHERE category = '" + category.getName() + "';");
-			if(rs.next()) {
-				categoryId = rs.getInt("id");
-			}
-	        
+
 	        // ps.setInt(2, mr.findById("money_id"));
 	        
 	        ps.setInt(3, quantity);
 	        ps.setDate(4, (java.sql.Date) expiration);
 	        ps.setString(5, manufacturer);
 	        
-	        rs = st.executeQuery("Select * from categories WHERE category = '" + category.getName() + "';");
+	        ResultSet rs = st.executeQuery("Select * from categories WHERE category = '" + category.getName() + "';");
 			if(rs.next()) {
 				categoryId = rs.getInt("id");
 			}
