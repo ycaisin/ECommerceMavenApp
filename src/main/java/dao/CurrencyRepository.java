@@ -28,7 +28,7 @@ public class CurrencyRepository {
 	}
 	
 	
-	public static Currency findById(int id) {
+	public Currency findById(int id) {
 		Currency currency = null;
 
 		try {
@@ -64,7 +64,7 @@ public class CurrencyRepository {
 		return currency;	
 	}
 	
-	public static void addCurrency(String code, double rate) {
+	public void addCurrency(String code, double rate) {
 		PreparedStatement ps;
 		try {
 			ps = conn.prepareStatement(insert_currency_query);
@@ -76,7 +76,7 @@ public class CurrencyRepository {
 		}
 	}
 	
-	public static void updateCurrencyCode(int id, String code) {
+	public void updateCurrencyCode(int id, String code) {
 		try {
 			PreparedStatement ps;
 			ps = conn.prepareStatement(update_currency_code_query);
@@ -89,7 +89,7 @@ public class CurrencyRepository {
 	}
 	
 	
-	public static void updateCurrencyRate(int id, double rate) {
+	public void updateCurrencyRate(int id, double rate) {
 		try {
 			PreparedStatement ps;
 			ps = conn.prepareStatement(update_currency_rate_query);
@@ -101,7 +101,7 @@ public class CurrencyRepository {
 		}		
 	}
 
-	public static void deleteCurrency (int id) {
+	public void deleteCurrency (int id) {
 		try {
 			PreparedStatement ps;
 			ps = conn.prepareStatement(delete_currency_query);

@@ -31,9 +31,21 @@ public class Product implements ProductInterface, Serializable{
 	private Category category;
 	private String imagePath;
 	
-	private Product(Integer id,String name, Money price, Integer quantity, Date expiration, String mannufactured,
+	public Product(Integer id,String name, Money price, Integer quantity, Date expiration, String mannufactured,
 			Category category, String imagePath) {
 		this.id = id;
+		this.name = name;
+		this.price = price;
+		this.quantity = quantity;
+		this.expiration = expiration;
+		this.manufacturer = mannufactured;
+		this.category = category;
+		this.imagePath = imagePath ;
+	}
+
+	public Product(String name, Money price, Integer quantity, Date expiration, String mannufactured,
+			Category category, String imagePath) {
+		//this.id = id;
 		this.name = name;
 		this.price = price;
 		this.quantity = quantity;

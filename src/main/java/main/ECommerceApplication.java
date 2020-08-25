@@ -6,8 +6,10 @@ import java.util.Calendar;
 
 import com.github.javafaker.Faker;
 
+import dao.CategoryRepository;
 import dao.CurrencyRepository;
 import dao.MoneyRepository;
+import dao.ProductRepository;
 import domain.Category;
 import domain.CurrencyProvider;
 import domain.DataRepository;
@@ -23,17 +25,22 @@ public static void main(String[] args) throws IOException, ClassNotFoundExceptio
 		CurrencyProvider currencyProvider = new CurrencyProvider().getInstance();
 		CurrencyRepository cr = new CurrencyRepository();
 		MoneyRepository mr = new MoneyRepository();
-		
+		CategoryRepository catr= new CategoryRepository();
 		//System.out.println(cr.findById(1));
 		//cr.addCurrency("EUR", 1);
 		//cr.deleteCurrency(3);
 		
 		//System.out.println(mr.findById(1));
 		//mr.addMoney("EUR", 900);
-		mr.deleteMonay(8);
+		//mr.deleteMonay(8);
 		
+		//System.out.println(catr.findById(1));		
+		//catr.deleteCategory(3);
+		ProductRepository pr = new ProductRepository();
+		Product product;
+		System.out.println(pr.findById(1));
 		
-		
+				
 		/*ProductFactory productFactory = new ProductFactory();
 		DataRepository dataRepository = new DataRepository();
 

@@ -44,7 +44,7 @@ public class MoneyRepository {
 		return money;	
 	}
 	
-	public static void addMoney(String code, double amount) {
+	public void addMoney(String code, double amount) {
 		PreparedStatement ps;
 		try {
 			ps = conn.prepareStatement(insert_money_query);
@@ -63,7 +63,7 @@ public class MoneyRepository {
 		}
 	}
 	
-	public static void updateAmount(int id, Float amount) {
+	public void updateAmount(int id, Float amount) {
 		try {
 			PreparedStatement ps;
 			ps = conn.prepareStatement(update_amount_query);
@@ -75,7 +75,7 @@ public class MoneyRepository {
 		}		
 	}
 	
-	public static void deleteMonay (int id) {
+	public void deleteMonay (int id) {
 		try {
 			PreparedStatement ps;
 			ps = conn.prepareStatement(delete_money_query);
